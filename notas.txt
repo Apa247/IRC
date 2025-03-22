@@ -1,0 +1,6 @@
+Conceptos de Socket
+Un socket es un punto final de comunicación que permite la transferencia de datos entre dos dispositivos a través de una red. Los sockets son una abstracción que permite a los programas de red comunicarse entre sí, ya sea en la misma máquina o en diferentes máquinas conectadas a través de una red.
+
+Tipos de Sockets
+Stream Sockets (SOCK_STREAM): Utilizan el protocolo TCP (Transmission Control Protocol) para proporcionar una conexión confiable y orientada a la conexión entre dos puntos finales.
+Datagram Sockets (SOCK_DGRAM): Utilizan el protocolo UDP (User Datagram Protocol) para proporcionar una comunicación no confiable y sin conexión.
