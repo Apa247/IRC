@@ -48,9 +48,10 @@ SocketManager::SocketManager(int port, const std::string& password)
     // 2. Configurar la direccion del servidor
     sockaddr_in server_address;
     memset(&server_address, 0, sizeof(server_address));
-    server_address.sin_family = AF_INET;
-    server_address.sin_addr.s_addr = INADDR_ANY;
-    server_address.sin_port = htons(port);
+    server_address.sin_family = AF_INET;  // IPv4
+    //server_address.sin_addr.s_addr = inet_addr("127.0.0.2"); 
+    server_address.sin_addr.s_addr = INADDR_ANY;  // aquí se asocia a cualquier dirección
+    server_address.sin_port = htons(port); // htons convierte el puerto a network byte order. Conversion de host byte order a network byte order
 
     // 3. Asociar el socket a la direccion del servidor
     if (bind(server_fd, (sockaddr*)&server_address, sizeof(server_address)) == -1)
